@@ -1,5 +1,5 @@
 const path = require('path');
-const { root } = require('../../webpack/helpers');
+const { root } = require('../../config/helpers');
 const envfile = root('secret.env');
 require('dotenv').config({ path: envfile });
 

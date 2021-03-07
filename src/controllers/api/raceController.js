@@ -4,12 +4,10 @@ const Trait = require('../../models/trait');
 const Proficiency = require('../../models/proficiency');
 const { ResourceList } = require('../../util/data');
 const SimpleController = require('../simpleController');
-const CustomController = require('../customController');
 
 const simpleController = new SimpleController(Race);
-const customController = new CustomController(Race);
 
-exports.index = (req, res, next) => customController.index(req, res, next);
+exports.index = (req, res, next) => simpleController.index(req, res, next);
 exports.show = (req, res, next) => simpleController.show(req, res, next);
 
 exports.showSubracesForRace = (req, res, next) => {
